@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Happy Monthsary 💕</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet"/>
+
+<!-- ✅ PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ff4d80">
+<link rel="apple-touch-icon" href="icon.png">
+
+<style>
+/* KEEPING YOUR ORIGINAL STYLE (shortened for clarity) */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #ffe8ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* FIXED SLIDE VISIBILITY */
+.slide {
+  position:absolute;
+  inset:0;
+  opacity:0;
+  pointer-events:none;
+  transform:scale(0.95);
+  transition:all 0.4s ease;
+}
+
+.slide.active {
+  opacity:1;
+  pointer-events:auto;
+  transform:scale(1);
+  display:flex;
+}
+
+/* KEEP REST OF YOUR CSS AS IS */
+</style>
+</head>
+
+<body>
+
+<!-- KEEP YOUR ORIGINAL HTML CONTENT HERE (UNCHANGED) -->
+
+<script>
+/* KEEP YOUR ORIGINAL JS HERE */
+
+/* ✅ SERVICE WORKER REGISTER */
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js')
+    .then(() => console.log('App ready 💕'));
+}
+</script>
+
+</body>
+</html>
